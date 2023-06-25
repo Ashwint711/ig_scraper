@@ -1,0 +1,30 @@
+Dear Aryan,
+
+I am pleased to inform you that I have successfully completed the assigned task of 
+developing an Instagram Business Account Data Fetching App. Following the given 
+instructions, I have utilized the Facebook Graph API to fetch data from a business 
+account and implemented the required functionalities. I would like to provide a brief explanation of 
+the assignment and the features I have implemented.
+
+Assignment Summary:
+
+Developed a Flutter app that fetches data from an Instagram business account or Instagram creator account using the Facebook Graph API.
+Implemented user authentication and authorization using USER ID and ACCESS TOKEN.
+Retrieved various account data, including media, followers, following, total likes, username, name, bio, and profile picture URL.
+Stored the fetched data securely in the Firebase Realtime Database.
+Implemented data retrieval from Firebase whenever needed.
+Ensured the automatic daily refresh of data through backend server scheduling.
+
+Steps:
+
+1. Create a business or creator account on Instagram and connect it to a Facebook page.
+2. Obtain the access token and user ID associated with your Instagram business account from the Facebook Developer platform.
+3. Launch the app and enter the access token and the user Id in the designated fields.
+4. Click on Get Meta Data button.
+5. Let the app fetch and display the meta data of your Instagram business account, including media, followers, following, total likes, username, name, bio, and profile picture URL.
+
+NOTE : We can access meta data such as followers,follows , posts, username, profile picture url
+etc by calling {https://graph.facebook.com/v17.0/$userId?fields=followers_count,follows_count,media_count,username,profile_picture_url&access_token=$accessToken}
+above url but we cannot access total number of Likes because likes is a part of MEDIA so we can't access it using the FIELD. 
+Therefore, I have used the following url for accessing total number of likes
+{https://graph.facebook.com/v17.0/$userId?media=like_count&access_token=$accessToken}
